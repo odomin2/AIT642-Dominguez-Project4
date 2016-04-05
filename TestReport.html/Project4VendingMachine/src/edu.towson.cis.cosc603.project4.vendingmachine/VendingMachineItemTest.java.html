@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>VendingMachineItemTest.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">edu.towson.cis.cosc603.project4.vendingmachine (Apr 5, 2016 2:26:06 PM)</a> &gt; <a href="../../index.html" class="el_group">Project4VendingMachine</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">edu.towson.cis.cosc603.project4.vendingmachine</a> &gt; <span class="el_source">VendingMachineItemTest.java</span></div><h1>VendingMachineItemTest.java</h1><pre class="source lang-java linenums">/**
+ * 
+ */
+package edu.towson.cis.cosc603.project4.vendingmachine;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+ * @author Obed Dominguez
+ *
+ */
+<span class="fc" id="L16">public class VendingMachineItemTest {</span>
+	
+	/**
+	 * Declaring necessary test objects for {@link VendingMachineItem}
+	 */
+	VendingMachineItem name, price;
+	VendingMachineException expected;
+	 
+	
+	/**
+	 * Initializes the necessary test objects for the test cases to use. 
+	 * @param VendingMachineException 
+	 * 
+	 * @throws Exception the exception
+	 */
+	
+	@Before 
+	public void setup() throws VendingMachineException{
+		
+		
+<span class="fc" id="L36">	}</span>
+	
+	/**
+	 * Test for the VendingMachineItem () method of the {@link VendingMachineItem} class 
+	 * @param &lt;expected&gt;
+	 * 
+	 */
+	 
+	@Test 
+	public void testVendingMachineItem() throws Exception {
+<span class="fc" id="L46">		String name = &quot;&quot;;</span>
+<span class="fc" id="L47">		double price = 1.0;</span>
+		
+<span class="fc" id="L49">		VendingMachineItem output = new VendingMachineItem (name, price);</span>
+		
+<span class="fc" id="L51">		assertNotNull(output);</span>
+<span class="fc" id="L52">		assertEquals(&quot;&quot;, output.getName());</span>
+<span class="fc" id="L53">		assertEquals(1.0, output.getPrice(), 1.0);</span>
+<span class="fc" id="L54">	}</span>
+	
+	/**
+	 * 	Tests the VendingMachineItem () method of the {@link VendingMachineItem} class with the VendinMachineException message. 
+	 * 
+	 * @throws Exception
+	 */
+	@Test(expected=edu.towson.cis.cosc603.project4.vendingmachine.VendingMachineException.class)
+	public void testVendingMachineItemException() throws Exception{
+<span class="fc" id="L63">		String name = null;</span>
+<span class="fc" id="L64">		double price = -4.9E-324;</span>
+		
+<span class="nc" id="L66">		VendingMachineItem output  = new VendingMachineItem(name, price);</span>
+		
+<span class="nc" id="L68">		assertNotNull(output);</span>
+		
+<span class="nc" id="L70">	}</span>
+	
+	 
+
+	/**
+	 * Test for the getName() method of the {@link VendingMachineItem} class
+	 * This is testing a string for the getName
+	 */ 
+	@Test
+	public void getNametest() {
+<span class="fc" id="L80">		VendingMachineItem test = new VendingMachineItem(&quot;&quot;, 0);</span>
+		
+<span class="fc" id="L82">		String output = test.getName();</span>
+		
+<span class="fc" id="L84">		assertEquals(&quot;&quot;, output);</span>
+<span class="fc" id="L85">	}</span>
+	
+	/**
+	 * Test for the getPrice() method of the {@link VendingMachineItem} class
+	 * This is testing for a price of double value in the getPrice.  
+	 */
+		
+	@Test
+	public void getPriceTest() {
+<span class="fc" id="L94">		VendingMachineItem test = new VendingMachineItem(null, 5);</span>
+		
+<span class="fc" id="L96">		double output = test.getPrice();</span>
+		
+<span class="fc" id="L98">		assertEquals(5, output, 4);</span>
+		
+<span class="fc" id="L100">	}</span>
+	
+	/**
+	 * Cleans up test object after a test case is executed. 
+	 */
+	
+	@After 
+	public void tearDown(){
+<span class="fc" id="L108">		name = null;</span>
+<span class="fc" id="L109">		price = null;</span>
+<span class="fc" id="L110">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>edu.towson.cis.cosc603.project4.vendingmachine (Apr 5, 2016 2:26:06 PM)</div></body></html>
